@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		FE00C77326AA03EA00156D11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77226AA03EA00156D11 /* main.swift */; };
 		FE00C77A26AA041500156D11 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77926AA041500156D11 /* Enums.swift */; };
-		FE00C77C26AA043F00156D11 /* ParentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77B26AA043F00156D11 /* ParentClass.swift */; };
-		FE00C77E26AA045D00156D11 /* ChildClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77D26AA045D00156D11 /* ChildClasses.swift */; };
+		FE00C77C26AA043F00156D11 /* Parent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77B26AA043F00156D11 /* Parent.swift */; };
+		FE00C77E26AA045D00156D11 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE00C77D26AA045D00156D11 /* Child.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +29,8 @@
 		FE00C76F26AA03EA00156D11 /* L4_TalalayVV */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = L4_TalalayVV; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE00C77226AA03EA00156D11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FE00C77926AA041500156D11 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		FE00C77B26AA043F00156D11 /* ParentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentClass.swift; sourceTree = "<group>"; };
-		FE00C77D26AA045D00156D11 /* ChildClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildClasses.swift; sourceTree = "<group>"; };
+		FE00C77B26AA043F00156D11 /* Parent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parent.swift; sourceTree = "<group>"; };
+		FE00C77D26AA045D00156D11 /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 			children = (
 				FE00C77226AA03EA00156D11 /* main.swift */,
 				FE00C77926AA041500156D11 /* Enums.swift */,
-				FE00C77B26AA043F00156D11 /* ParentClass.swift */,
-				FE00C77D26AA045D00156D11 /* ChildClasses.swift */,
+				FE00C77B26AA043F00156D11 /* Parent.swift */,
+				FE00C77D26AA045D00156D11 /* Child.swift */,
 			);
 			path = L4_TalalayVV;
 			sourceTree = "<group>";
@@ -130,8 +130,8 @@
 			files = (
 				FE00C77A26AA041500156D11 /* Enums.swift in Sources */,
 				FE00C77326AA03EA00156D11 /* main.swift in Sources */,
-				FE00C77C26AA043F00156D11 /* ParentClass.swift in Sources */,
-				FE00C77E26AA045D00156D11 /* ChildClasses.swift in Sources */,
+				FE00C77C26AA043F00156D11 /* Parent.swift in Sources */,
+				FE00C77E26AA045D00156D11 /* Child.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
