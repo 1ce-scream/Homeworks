@@ -10,8 +10,8 @@ import Foundation
 ///Дженерик для очереди (FIFO)
 struct Queue<T> {
     //массив элементов
-    var elements: [T] = []
-
+    private var elements: [T] = []
+    
     ///метод для добавления элемента в очередь
     ///- parameter element: принимает элемент
     mutating func push(_ element: T) {
@@ -39,35 +39,21 @@ struct Queue<T> {
     ///метод для вывода в консоль количества элементов в очереди
     func elementsInQueue() { print("Длина очереди: \(elements.count) \n") }
     
-    /*
-    Андрей, подскажите, пожалуйста, можно ли как-то избежать использования
-     типа Any в методе map?
-     
-     Я понимаю, что если в очередь будут добавляться "простые" элементы
-     одного типа (цифры или строки), а не экземпляры класса с кучей свойств
-     разных типов, то проблем с типизацией не будет и метод будет выглядеть так:
-     
-     func map(_ predicate: (T) -> T) -> [T] {
-         var tmpArray: [T] = []
-         for element in elements {
-             let newElement = predicate(element)
-             tmpArray.append(newElement)
-         }
-         return tmpArray
-     }
-     
-     Либо в данном конкретном случае можно ограничить дженерик классом Car и для
-     каждого типа данных писать свой метод. Что не очень удобно.
-    */
-    
-    ///экспериментальный метод для трасформации массива
+    ///метод для трасформации массива
     ///- parameter predicate: принимает замыкание
-    func map(_ predicate: (T) -> Any) -> [Any] {
-        var tmpArray: [Any] = []
+    func map<Output>(_ predicate: (T) -> Output) -> [Output] {
+        var tmpArray: [Output] = []
         for element in elements {
             let newElement = predicate(element)
             tmpArray.append(newElement)
         }
         return tmpArray
+    }
+    
+    ///просмотр элемента в очереди
+    ///- parameter index: номер элемента в очереди
+    subscript(index: Int) -> T? {
+        guard index < elements.count && index >= 0 else { return nil }
+        return elements[index]
     }
 }

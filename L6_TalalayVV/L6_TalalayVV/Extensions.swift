@@ -19,13 +19,3 @@ extension Car: CustomStringConvertible {
             """
     }
 }
-
-//расширение добавляющее сабскрипт в очередь для исполнения ТЗ
-extension Queue {
-    ///просмотр элемента в очереди
-    ///- parameter index: номер элемента в очереди
-    subscript(index: Int) -> T? {
-        guard index < elements.count && index >= 0 else { return nil }
-        return elements[index]
-    }
-}
