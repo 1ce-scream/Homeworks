@@ -45,12 +45,12 @@ class Car {
     
     ///Метод для погрузки в багажник
     /// - parameter cargoVolume: Объем груза для погрузки
-    func loadCargo(cargoVolume: Double) -> CarErrors? {
+    func loadCargo(cargoVolume: Double) -> CarError? {
         guard cargoVolume > 0 else {
-            return CarErrors.incorrectCargoVolume
+            return CarError.incorrectCargoVolume
         }
         guard cargoVolume <= freeSpace else {
-            return CarErrors.notEnoughFreeSpace
+            return CarError.notEnoughFreeSpace
         }
         filledVolume += cargoVolume
         print("Груз объемом \(cargoVolume) л. погружен")
@@ -59,12 +59,12 @@ class Car {
     
     ///Метод для выгрузки из багажника
     /// - parameter cargoVolume: Объем груза для выгрузки
-    func unloadCargo(cargoVolume: Double) -> CarErrors? {
+    func unloadCargo(cargoVolume: Double) -> CarError? {
         guard cargoVolume > 0 else {
-            return CarErrors.incorrectCargoVolume
+            return CarError.incorrectCargoVolume
         }
         guard cargoVolume <= filledVolume else {
-            return CarErrors.notEnoughCargoVolume
+            return CarError.notEnoughCargoVolume
         }
         filledVolume -= cargoVolume
         print("Груз объемом \(cargoVolume) л. выгружен")
@@ -77,10 +77,10 @@ class Car {
     /// - parameter cargoVolume: Объем груза для погрузки
     func unsafeLoadCargo(cargoVolume: Double) throws {
         guard cargoVolume > 0 else {
-            throw CarErrors.incorrectCargoVolume
+            throw CarError.incorrectCargoVolume
         }
         guard cargoVolume <= freeSpace else {
-            throw CarErrors.notEnoughFreeSpace
+            throw CarError.notEnoughFreeSpace
         }
         filledVolume += cargoVolume
         print("Груз объемом \(cargoVolume) л. погружен")
@@ -90,10 +90,10 @@ class Car {
     /// - parameter cargoVolume: Объем груза для выгрузки
     func unsafeUnloadCargo(cargoVolume: Double) throws {
         guard cargoVolume > 0 else {
-            throw CarErrors.incorrectCargoVolume
+            throw CarError.incorrectCargoVolume
         }
         guard cargoVolume <= filledVolume else {
-            throw CarErrors.notEnoughCargoVolume
+            throw CarError.notEnoughCargoVolume
         }
         filledVolume -= cargoVolume
         print("Груз объемом \(cargoVolume) л. выгружен")

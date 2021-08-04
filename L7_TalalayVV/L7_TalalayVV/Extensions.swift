@@ -8,11 +8,11 @@
 import Foundation
 
 /*
- Расширение для перечисления CarErrors, имплементирующее
+ Расширение для перечисления CarError, имплементирующее
  протокол CustomStringConvertible
 */
-extension CarErrors: CustomStringConvertible {
-    var description: String { self.localizedDescription}
+extension CarError: CustomStringConvertible {
+    var description: String { self.localizedDescription }
 }
 
 //Расширение для класса Car, имплементирующее протокол CustomStringConvertible
